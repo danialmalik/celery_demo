@@ -1,5 +1,12 @@
 <html>
     <body>
         {{ response_text }}
+
+        <form method='post' action='/send_email/'>
+            {% csrf_token %}
+            {{ form }}
+            <input type='submit' />
+        </form>
+
     </body>
 </html>
